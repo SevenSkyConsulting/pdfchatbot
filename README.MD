@@ -1,0 +1,3 @@
+The idea is to pass a book in pdf format to a chatbot that we can ask questions and talk about.
+The first step is choosing a pre-trained LLM to customize and train with our own data which are pdf files in this example. GPT4, LLAMA 3.1, T5, ...  come to mind when considering text-to-text llms but in this example I'm going to use Mistralai for several reasons such as being more convenient to use since it does not require access approval like Meta's LLAMA and is open-source unlike gpt4. 
+We receive the pdf file and break it into smaller chunks then we use Hugging face Embeddings and chromedb to vectorize the text and the embeddings. After that load the LLM and create a Q/A chain for the end user to interact with.
